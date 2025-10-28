@@ -1,0 +1,725 @@
+ *{
+ 
+  /* background-color: #e4e4e4; */
+  font-family: serif;
+  
+ }
+ .landing{
+   height: 100vh;  
+   
+  background: url('/img/64994452421978.jpg') no-repeat center center fixed;
+  background-size: cover;
+   overflow-x: hidden;
+ }
+ 
+body {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+ .navbar{
+      display: flex;
+     align-items: center;
+  }
+
+
+.logo {
+    display: inline-block;
+    padding-left: 6rem;
+    color: white;
+
+    background-image: url("../img/logo.png");
+    background-size: cover;     
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px; 
+    height: 90px; 
+    padding-top: 10PX;
+}
+.listitem {
+      position: relative;
+      left: 15rem;
+      display: flex;
+      background: #013010;
+      border: 2px solid #629a2d;
+      border-radius: 30px;
+      padding: 10px 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 0;
+
+      
+    }
+
+    /* 📌 Each nav item */
+    .nav-item {
+      padding: 10px 25px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #444;
+      background: transparent;  /* ✅ no gray box */
+      position: relative;
+      z-index: 10; /* ✅ text is above toggle */
+    }
+
+    /* Default text color */
+    .nav-item {
+      color: #444;
+    }
+
+    /* Active text color */
+    .nav-item.active {
+      color: white;
+    }
+
+    /* 🔵 Toggle pill background */
+    .toggle {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      height: 45px;
+      background: #84bc27;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+    /* login button css */
+    .btn-postion{
+      position: absolute;
+     right: 1rem;
+    }
+    #open-login{
+      background: transparent;  /* Remove default white background */
+    border: none;             /* Remove border */
+    color: white;             /* Change text color if needed */
+    font-size: 16px;           /* Adjust text size */
+    cursor: pointer;
+    }
+    #open-login :focus{
+      outline: none;
+    }
+    .button-wrapper {
+      
+    background-color: #113116; /* dark green outer ring */
+    border-radius: 50px;
+    padding: 6px 25px; /* outer shape padding */
+    display: inline-block;
+    cursor: pointer;
+    box-shadow:
+      inset 0 0 6px #2f7a07cc,
+      0 5px 15px #26500699;
+    transition: box-shadow 0.3s ease;
+    user-select: none;
+  }
+
+  .button-wrapper:active {
+    box-shadow:
+      inset 0 0 8px #2f7a07ff,
+      0 0 10px #a6e01c99;
+  }
+
+  .button-inner {
+    display: inline-block;
+    background-color: #88bb22; /* lighter green for inner */
+    border-radius: 35px;
+    padding: 12px 48px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.03em;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Ripple container to hold ripple effect */
+  .ripple-container {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 35px;
+    overflow: hidden;
+  }
+
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: rippleAnim 0.6s linear forwards;
+    box-shadow: 0 0 8px 3px rgba(255,255,255,0.5);
+  }
+
+  @keyframes rippleAnim {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+    /* ------------------------------ */
+
+.content h1{
+     display: inline;
+    font-size: 6rem;
+    position: absolute;
+    bottom: 29rem;
+    left: 3rem;
+}
+.content h2{
+      display: inline;
+    font-size: 6rem;
+    position: relative;
+        top: 12rem;
+    left: 3rem;
+}
+
+.info{
+    position: relative;
+    top: 13rem;
+    width: 34rem;
+    margin-left: 3rem;
+    font-size: 1.6rem;
+    
+}
+
+/* --------------------------- */
+.my-btn {
+ background-color: #5f9533;
+    color: white;
+    border: none;
+    padding: 23px 60px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+.button{
+        display:flex;
+        position: relative;
+        top: 15rem;
+        left: 2rem;
+
+}
+    .my-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* ✅ Vibrate animation */
+    .vibrate-1 {
+      animation: vibrate-1 0.9s linear infinite both;
+    }
+
+    @keyframes vibrate-1 {
+      0%   { transform: translate(0); }
+      20%  { transform: translate(-2px, 2px); }
+      40%  { transform: translate(-2px, -2px); }
+      60%  { transform: translate(2px, 2px); }
+      80%  { transform: translate(2px, -2px); }
+      100% { transform: translate(0); }
+    }
+/* #container3D{
+    border: 2px solid black;
+    height: 40rem;
+    width: 53rem;
+    position: absolute;
+    left: 40rem;
+    top: 8rem;
+} */
+
+#container3D {
+    width: 53rem;        /* your chosen size */
+    height: 40rem;
+    position: absolute;  /* or relative if needed */
+    right: 2rem;
+    top: 8rem;
+    overflow: hidden;    /* ✅ stops scrollbars */    
+}
+
+/* ------------------------------page 2------------------------------- */
+.page2{
+   background: url('/img/page2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  border: 2px solid black;
+  height: 56rem;
+}
+
+.heading{
+   height: 15rem;
+}
+.heading h1{
+  margin-left: 8rem;
+    font-size: 3rem;
+    font-weight: lighter;
+    padding-top: 3rem;
+}
+.heading p{
+  margin-left: 8rem;
+    font-size: 1.5rem;
+}
+.page2 .container{
+         height: 15rem;
+    width: 75rem;
+    margin-left: 8rem;
+    display: flex;
+    justify-content: row;
+    justify-content: space-around;
+}
+.inner{
+      border: 2px solid #baf35c;
+    height: 14rem;
+    width: 22rem;
+}
+.inner img{
+    height: 50px;
+      padding-top: 1rem;
+    padding-left: 1rem;
+}
+.inner h3{
+  font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+ .inner p{
+  font-size: 1.3rem;
+    padding-left: 1.5rem;
+    margin-top: -0.75rem;
+ }
+ .bottom-part{
+    height: 26rem;
+ }
+ .bottom-part h1{
+  text-align: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+ }
+ .bottom-part p{
+      text-align: center;
+    font-size: 1.5em;
+ }
+ /* button csss */
+ .explore-button {
+      background-color: #41bf22;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 28px;
+      box-shadow: 0 4px 6px rgba(65, 191, 34, 0.4);
+      color: #1e2b2a;
+      font-weight: 700;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      margin-left: 40rem;
+    margin-top: 2rem;
+    }
+    .explore-button:hover, .explore-button:focus {
+      background-color: #baf35c;
+      box-shadow: 0 6px 10px rgba(59, 175, 32, 0.6);
+      outline: none;
+    }
+    .explore-button:active {
+      background-color: #35871a;
+      box-shadow: 0 2px 4px rgba(53, 135, 26, 0.7);
+    }
+    /* page3 */
+.page3{
+      background: url('/img/page3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      border: 2px solid black;
+      height: 50rem;
+}
+
+.head h1{
+  
+    font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.5;
+      max-width: 900px;
+      margin: 0 auto 1rem auto;
+      font-size: clamp(1.8rem, 4vw, 3.5rem);
+      color: #f8fafc; /* almost white */
+      text-align: center;
+      margin-top: 5rem;
+}
+.head p{
+   text-align: center;
+   font-size: 1.3rem;
+}
+.bottom-img{
+          height: 23rem;
+    /* width: 60rem; */
+    position: relative;
+    /* left: 15rem; */
+    top: 2rem;
+    background-image: url(/img/car.webp);
+    background-size: contain;
+}
+/* page4 */
+.page4{
+  background: url('/img/page4.jpg') no-repeat center center fixed;
+      background-size: cover;
+      border: 2px solid;
+    height: rem;
+}
+footer {
+    background-color: #111;
+    color: #ccc;
+    position: relative;
+    padding: 40px 20px 20px 20px;
+    font-size: 14px;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-column {
+    flex: 1 1 300px;
+    margin: 10px;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #ccc;
+  }
+  .footer-logo svg {
+    fill: #c5a14d;
+    width: 30px;
+    height: 30px;
+  }
+  .social-icons {
+    margin-top: 10px;
+  }
+  .social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: #ccc;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .social-icons a:hover {
+    background-color: #c5a14d;
+    border-color: #c5a14d;
+    color: #111;
+  }
+  .footer-column h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .footer-column p, .footer-column a, .footer-column li {
+    color: #888;
+    font-weight: 400;
+    margin: 6px 0;
+    font-size: 14px;
+  }
+  .footer-column p svg,
+  .footer-column a svg {
+    vertical-align: middle;
+    margin-right: 6px;
+    fill: #888;
+    width: 16px;
+    height: 16px;
+  }
+  .footer-column ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  .footer-column ul li {
+    padding-left: 15px;
+    position: relative;
+  }
+  .footer-column ul li:before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #888;
+    font-weight: 700;
+  }
+  .footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+  }
+  .footer-bottom strong {
+    color: #ccc;
+  }
+  /* Scroll to top button */
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 42px;
+    height: 42px;
+    background-color: #3da415;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+  }
+  #scrollTopBtn:hover {
+    background-color: #2b700a;
+  }
+/* -------------------------------------------------------- */
+/* LOGIN MODAL STYLE */
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+}
+
+.login-modal-content {
+  width: 768px;
+  max-width: 90%;
+  height: 480px;
+  border-radius: 20px;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+/* ------------------pop up css------------- */
+#login-modal {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* show above everything */
+}
+
+#login-modal .login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+}
+/* --------------------------- */
+.login-container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.login-container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.login-container span {
+    font-size: 12px;
+}
+
+.login-container a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.login-container button {
+    background-color: #629a2d;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.login-container button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.login-container form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.login-container input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.login-form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.login-sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.login-container.login-active .login-sign-in {
+    transform: translateX(100%);
+}
+
+.login-sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.login-container.login-active .login-sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: login-move 0.6s;
+}
+
+@keyframes login-move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.login-social-icons {
+    margin: 20px 0;
+}
+
+.login-social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.login-toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.login-container.login-active .login-toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.login-toggle {
+    background-color: #512da8;
+    height: 100%;
+    background: linear-gradient(to right, #629a2d, #629a2d);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.login-container.login-active .login-toggle {
+    transform: translateX(50%);
+}
+
+.login-toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.login-toggle-left {
+    transform: translateX(-200%);
+}
+
+.login-container.login-active .login-toggle-left {
+    transform: translateX(0);
+}
+
+.login-toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.login-container.login-active .login-toggle-right {
+    transform: translateX(200%);
+}
+
